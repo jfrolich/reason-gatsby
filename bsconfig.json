@@ -1,6 +1,8 @@
 {
   "name": "reason-gatsby",
-  "version": "0.1.0",
+  "reason": {
+    "react-jsx": 3
+  },
   "sources": {
     "dir": "src",
     "subdirs": true

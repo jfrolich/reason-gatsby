@@ -14,6 +14,14 @@ module Link = {
     "Link";
 };
 
+type location = {
+  key: string,
+  pathname: string,
+  search: string,
+  hash: string,
+  state: option(Js.Json.t),
+};
+
 [@bs.module "@reach/router"] external navigate: string => unit = "navigate";
 
 // ___loader is a Gatsby global, that can enqueue routes to fetch
