@@ -9,7 +9,17 @@ external useStaticQuery: string => Js.Json.t = "useStaticQuery";
 module Link = {
   [@bs.module "gatsby"] [@react.component]
   external make:
-    (~children: React.element, ~_to: string, ~style: ReactDOMRe.Style.t=?) =>
+    (
+      ~children: React.element,
+      ~to_: string,
+      ~style: ReactDOMRe.Style.t=?,
+      ~replace: bool=?,
+      ~onClick: unit => unit=?,
+      ~state: Js.Json.t=?,
+      ~activeClassName: string=?,
+      ~activeStyle: ReactDOMRe.Style.t=?,
+      ~partiallyActive: bool=?
+    ) =>
     React.element =
     "Link";
 };
@@ -25,7 +35,7 @@ type location = {
 [@bs.module "@reach/router"] external navigate: string => unit = "navigate";
 
 // ___loader is a Gatsby global, that can enqueue routes to fetch
-let hover = [%bs.raw
+let hover: string => unit = [%bs.raw
   {|
 function(str) {
   if (___loader) {
@@ -33,4 +43,12 @@ function(str) {
   }
 }
 |}
+];
+
+let enqueue: string => unit = [%bs.raw
+  {| function (str) {
+  if (___loader) {
+    ___loader.enqueue(str)
+  }
+}|}
 ];
