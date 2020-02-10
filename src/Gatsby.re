@@ -11,7 +11,7 @@ module Link = {
   external make:
     (
       ~children: React.element,
-      ~to_: string,
+      ~_to: string,
       ~style: ReactDOMRe.Style.t=?,
       ~replace: bool=?,
       ~onClick: unit => unit=?,
