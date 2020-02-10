@@ -18,7 +18,8 @@ module Link = {
       ~state: Js.Json.t=?,
       ~activeClassName: string=?,
       ~activeStyle: ReactDOMRe.Style.t=?,
-      ~partiallyActive: bool=?
+      ~partiallyActive: bool=?,
+      ~rel: string=?
     ) =>
     React.element =
     "Link";
