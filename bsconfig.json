@@ -1,5 +1,5 @@
 {
-  "name": "reason-gatsby",
+  "name": "@jfrolich/reason-gatsby",
   "reason": {
     "react-jsx": 3
   },
