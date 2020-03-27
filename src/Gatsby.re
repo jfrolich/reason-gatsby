@@ -12,6 +12,7 @@ module Link = {
     (
       ~children: React.element,
       ~_to: string,
+      ~className: string=?,
       ~style: ReactDOMRe.Style.t=?,
       ~replace: bool=?,
       ~onClick: unit => unit=?,
