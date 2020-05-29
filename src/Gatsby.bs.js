@@ -9,9 +9,16 @@ var hover = (function(str) {
   }
 });
 
+var enqueue = (function (str) {
+  if (___loader) {
+    ___loader.enqueue(str)
+  }
+});
+
 export {
   Link ,
   hover ,
+  enqueue ,
   
 }
 /* No side effect */

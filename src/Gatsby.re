@@ -15,7 +15,7 @@ module Link = {
       ~className: string=?,
       ~style: ReactDOMRe.Style.t=?,
       ~replace: bool=?,
-      ~onClick: unit => unit=?,
+      ~onClick: ReactEvent.Mouse.t => unit=?,
       ~state: Js.Json.t=?,
       ~activeClassName: string=?,
       ~activeStyle: ReactDOMRe.Style.t=?,
