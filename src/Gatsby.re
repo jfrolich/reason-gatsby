@@ -34,7 +34,13 @@ type location = {
   state: option(Js.Json.t),
 };
 
+type navigationOptions = {
+  state: option(Js.Json.t),
+  replace: bool
+};
+
 [@bs.module "@reach/router"] external navigate: string => unit = "navigate";
+[@bs.module "@reach/router"] external navigateWithOpts: (string, navigationOptions) => unit = "navigate";
 
 // ___loader is a Gatsby global, that can enqueue routes to fetch
 let hover: string => unit = [%bs.raw

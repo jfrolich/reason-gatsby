@@ -1,12 +1,14 @@
 {
   "name": "reason-gatsby",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world"
   },
-  "keywords": ["BuckleScript"],
+  "keywords": [
+    "BuckleScript"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
